@@ -1,0 +1,163 @@
+$theme-colors: (
+    "primary": #e77b47,
+    "secondary": #999,
+    "dark": #000000
+);
+
+@import "node_modules/bootstrap/scss/bootstrap";
+
+img {
+    max-width:100%;
+}
+.cursor-pointer {
+    cursor:pointer;
+}
+
+.animation-move {
+    animation:move 3s infinite;
+}
+.animation-move-slow {
+    animation:move 6s infinite;
+}
+@keyframes move{
+	0%{
+		transform:translateX(0)
+	}
+	50%{
+		transform:translateX(15px)
+	}
+	100%{
+		transform:translateX(0)
+	}
+}
+html {
+    scroll-behavior: smooth;
+  }
+
+/* ----- Halloween Landing Page no1 ----- */
+
+    @import url('https://fonts.googleapis.com/css2?family=Stylish:wght@400;600&family=Nanum+Pen+Script&family=Shojumaru&display=swap');
+
+.landing-page-style1 {
+    font-family: "Stylish";
+    color:#29373c;
+    h1,h2,h3,h4,h5,h6, .navbar {
+        font-family: "Nanum Pen Script";
+    }
+    .navbar-brand, .fancy-font {
+        font-family: "Shojumaru";
+    }
+    .navbar {
+        font-size:1.5em;
+    }
+    .lead {
+        font-size:2em;
+    }
+    .border-bottom-dashed {
+        border-bottom:1px dashed;
+    }
+    .bg-theme-light {
+        background:#f9fbf3;
+    }
+    .full_height_banner {
+        background-size: cover;
+        background-position: 0 0;
+        background-repeat: no-repeat;
+        background-color: transparent;
+        min-height:800px;
+        height: 100vh;
+        padding: 0;
+        position: relative;
+        z-index: 99;
+        margin: 0;
+        &:after {
+            content: " ";
+            position: absolute;
+            bottom: -.1rem;
+            left: 0;
+            width: 100%;
+            height: 10rem;
+            display: block;
+            background: transparent url(../img/wav.png) no-repeat 0 0/100% 100%;
+            z-index: 99;
+        }
+        .intro-container {
+            padding-top:10rem;
+            color:#fff;
+            h1 {
+                color:#ffac2c;
+            }
+        }
+    }
+    ul#countdown {
+        margin:25px 0 40px 0;
+        padding:0;
+    }
+    ul#countdown li {
+        display: inline-block;
+        margin:8px 8px;
+        padding: 6px 0 4px 0;
+        width:70px;
+        height:70px;
+        background-color:transparent;
+        border:2px solid #fff;
+        -webkit-border-radius: 8px 8px;
+        -moz-border-radius: 8px 8px;
+        border-radius: 8px 8px;
+        text-align: center;
+        vertical-align:middle;
+    }
+    ul#countdown li span {
+        color:#fff;
+        font-size: 30px;
+        line-height:30px;
+        font-weight: 500;
+        position: relative;
+    }
+    ul#countdown li p.timeRefDays,
+    ul#countdown li p.timeRefHours,
+    ul#countdown li p.timeRefMinutes,
+    ul#countdown li p.timeRefSeconds {
+        color:#fff;
+        margin-top:2px;
+        text-transform: uppercase;
+        font-size: 13px;
+        line-height:14px;
+        font-weight: 400;
+    }
+    section {
+        padding-top:7rem;
+        padding-bottom:7rem;
+        .header {
+            margin-bottom:5rem;
+        }
+        &.about {
+            padding-bottom:17rem;
+            &:after {
+                content: " ";
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                height: 10rem;
+                display: block;
+                background: transparent url(../img/wav2.png) no-repeat 0 0/100% 100%;         
+            }
+        }
+        &.faq {
+            padding-top:4rem;
+            padding-bottom:10rem;
+        }
+    }
+    footer {
+        padding:7rem 0 3rem;
+        background-color:#e65400;
+        a {
+            color:#fff;
+            transition: all .3s;
+        }
+    }
+    .fixed-bottom.right-unset {
+        right:unset;
+    }
+}
