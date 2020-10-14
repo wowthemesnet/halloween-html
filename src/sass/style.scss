@@ -68,16 +68,18 @@ html {
         position: relative;
         z-index: 99;
         margin: 0;
-        &:after {
-            content: " ";
-            position: absolute;
-            bottom: -.1rem;
-            left: 0;
-            width: 100%;
-            height: 10rem;
-            display: block;
-            background: transparent url(../img/wav.png) no-repeat 0 0/100% 100%;
-            z-index: 99;
+        @include media-breakpoint-up(lg) {
+            &:after {
+                content: " ";
+                position: absolute;
+                bottom: -.1rem;
+                left: 0;
+                width: 100%;
+                height: 10rem;
+                display: block;
+                background: transparent url(../img/wav.png) no-repeat 0 0/100% 100%;
+                z-index: 99;
+            }
         }
         .intro-container {
             padding-top:10rem;
@@ -149,6 +151,11 @@ html {
     }
     footer {
         padding:7rem 0 3rem;
+        @include media-breakpoint-up(lg) {
+            .footer-banner {
+                height:300px;
+            }
+        }
     }
     .fixed-bottom.right-unset {
         right:unset;
