@@ -19,6 +19,25 @@ img {
 .animation-move-slow {
     animation:move 6s infinite;
 }
+.animation-move-big {
+    animation:move-big 9s infinite;
+}
+.animation-bat {
+    animation:move-bat 11s infinite;
+}
+.right-0 {
+    right:0;
+    left:unset;
+}
+.top-10 {
+    top:10px;
+}
+.bottom-10 {
+    bottom:10px;
+}
+.z-index1001 {
+    z-index:1001;
+}
 @keyframes move{
 	0%{
 		transform:translateX(0)
@@ -30,6 +49,41 @@ img {
 		transform:translateX(0)
 	}
 }
+@keyframes move-bat{
+	0%{
+		transform:translateX(-50%)
+	}
+	30%{
+		transform:translateX(-100%)
+    }
+    50%{
+		transform:translateX(-150%)
+	}
+	70%{
+		transform:translateY(-170%)
+    }
+    100% {
+        transform:translateX(-50%)
+    }
+}
+@keyframes move-big{
+	0%{
+		transform:translateX(0%)
+	}
+	30%{
+		transform:translateX(-150%)
+    }
+    50%{
+		transform:translateY(-50%)
+	}
+	70%{
+        transform:translateY(-50%);
+        transform:translateX(50%)
+    }
+    100% {
+        transform:translateX(0%)
+    }
+}
 html {
     scroll-behavior: smooth;
   }
@@ -39,6 +93,7 @@ html {
 .landing-page-style1 {
     font-family: "Stylish";
     color:#29373c;
+    font-size: 19px;
     h1,h2,h3,h4,h5,h6, .navbar, .lead {
         font-family: "Nanum Pen Script";
     }
@@ -46,7 +101,7 @@ html {
         font-family: "Shojumaru";
     }
     .navbar {
-        font-size:1.5em;
+        font-size:1.3em;
     }
     .lead {
         font-size:2em;
@@ -148,14 +203,104 @@ html {
             padding-top:4rem;
             padding-bottom:10rem;
         }
+    }  
+    .testimonial6 h1,
+    .testimonial6 h2,
+    .testimonial6 h3,
+    .testimonial6 h4,
+    .testimonial6 h5,
+    .testimonial6 h6 {
+        color: #3e4555;
+    }
+    .testimonial6 .font-weight-medium {
+    font-weight: 500;
+    }
+    .testimonial6 h5 {
+        line-height: 22px;
+        font-size: 18px;
+    }
+    .testimonial6 .subtitle {
+        color: #8d97ad;
+        line-height: 24px;
+        font-size: 16px;
+    }
+    .testimonial6 .testi6 {
+        border-right: 1px solid rgba(120, 130, 140, 0.13);
+    }
+    .testimonial6 .testi6 .nav-link {
+        border-radius: 0px;
+        margin: 8px -2px 8px 0;
+    }
+    .testimonial6 .testi6 .nav-link img {
+        width: 70px;
+        opacity: 0.5;
+    }
+    .testimonial6 .testi6 .nav-link.active {
+        background: transparent;
+        color: #8d97ad;
+        border-right: 3px solid #8ac1bf;
+    }
+    .testimonial6 .testi6 .nav-link.active img {
+        opacity: 1;
+    }
+    .testimonial6 .btn-md {
+        padding: 18px 0px;
+        width: 60px;
+        height: 60px;
+        font-size: 20px;
+    }
+    @media (max-width: 767px) {
+        .testimonial6 .testi6 .nav-link {
+        margin: 0px 0px -2px 0;
+        padding: 10px;
+        }
+        .testimonial6 .testi6 {
+        -webkit-box-orient: horizontal !important;
+        -webkit-box-direction: normal !important;
+        -webkit-flex-direction: row !important;
+        -ms-flex-direction: row !important;
+        flex-direction: row !important;
+        border-right: 0px solid rgba(120, 130, 140, 0.13);
+        border-bottom: 1px solid rgba(120, 130, 140, 0.13);
+        margin-bottom: 40px;
+        }
+        .testimonial6 .testi6 .nav-link img {
+        width: 40px;
+        }
+        .testimonial6 .testi6 .nav-link.active {
+                border-right: 0px solid #8ac1bf;
+                border-bottom: 3px solid #8ac1bf;
+        }
     }
     footer {
         padding:7rem 0 3rem;
+        position:relative;
+        background: #FFB75E;  
+        background: -webkit-linear-gradient(to left, #ED8F03, #FFB75E);  
+        background: linear-gradient(to left, #ED8F03, #FFB75E);
+        a {
+            color:inherit;
+            border-bottom:1px solid;
+            &:hover {
+                border-bottom:1px solid orangered;
+                text-decoration:none;
+            }
+        }
         @include media-breakpoint-up(lg) {
             .footer-banner {
                 height:300px;
             }
         }
+        &:before {
+            content: " ";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 13rem;
+            display: block;
+            background: transparent url(../img/wav3.png) no-repeat 0 0/100% 100%;
+         }
     }
     .fixed-bottom.right-unset {
         right:unset;
