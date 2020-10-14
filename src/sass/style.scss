@@ -36,12 +36,10 @@ html {
 
 /* ----- Halloween Landing Page no1 ----- */
 
-    @import url('https://fonts.googleapis.com/css2?family=Stylish:wght@400;600&family=Nanum+Pen+Script&family=Shojumaru&display=swap');
-
 .landing-page-style1 {
     font-family: "Stylish";
     color:#29373c;
-    h1,h2,h3,h4,h5,h6, .navbar {
+    h1,h2,h3,h4,h5,h6, .navbar, .lead {
         font-family: "Nanum Pen Script";
     }
     .navbar-brand, .fancy-font {
@@ -151,11 +149,6 @@ html {
     }
     footer {
         padding:7rem 0 3rem;
-        background-color:#e65400;
-        a {
-            color:#fff;
-            transition: all .3s;
-        }
     }
     .fixed-bottom.right-unset {
         right:unset;
