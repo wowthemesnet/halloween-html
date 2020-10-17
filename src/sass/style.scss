@@ -305,4 +305,21 @@ html {
     .fixed-bottom.right-unset {
         right:unset;
     }
+    @include media-breakpoint-down(md) { 
+        .display-3 {
+            font-size:2em;
+        }
+        .lead {
+            font-size:1.3em;
+        }
+        ul#countdown li span {
+            font-size:1em;
+        }
+        ul#countdown li {
+            width:50px;
+        }
+        footer:before {
+            background:none;
+        }
+    }
 }
