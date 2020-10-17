@@ -306,6 +306,9 @@ html {
         right:unset;
     }
     @include media-breakpoint-down(md) { 
+        body {
+            overflow-x:hidden;
+        }
         .display-3 {
             font-size:2em;
         }
@@ -320,6 +323,10 @@ html {
         }
         footer:before {
             background:none;
+        }
+        .actionbtn {
+            display:block;
+            margin-bottom:1rem;
         }
     }
 }
